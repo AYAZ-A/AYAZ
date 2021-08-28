@@ -1,0 +1,27 @@
+pipeline {
+	agent any
+		stages {
+			stage('One') {
+					steps {
+						echo 'Hi!! This is AYAZ AHMED'
+					}
+			}
+
+			stage('Second') {
+				steps {
+					input('Do you want to know about me?')
+				}
+			}
+
+			stage('Three') {
+					when {
+						not {
+							branch "master"
+						}
+					}
+					steps {
+						echo 'Hello!!'
+					}
+			}
+		}
+}

@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 		stages {
-			stage('One') {
+			stage('First') {
 					steps {
 						echo 'Hi!! This is AYAZ AHMED'
 					}
@@ -13,7 +13,7 @@ pipeline {
 				}
 			}
 
-			stage('Three') {
+			stage('Third') {
 					when {
 						not {
 							branch "master"
